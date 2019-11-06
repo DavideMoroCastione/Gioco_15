@@ -65,30 +65,127 @@ class ViewController: UIViewController {
         btnNull.isUserInteractionEnabled = false
     }
     
-    func btnUnlocked() {
-        btn1.isUserInteractionEnabled = true
-        btn2.isUserInteractionEnabled = true
-        btn3.isUserInteractionEnabled = true
-        btn4.isUserInteractionEnabled = true
-        btn5.isUserInteractionEnabled = true
-        btn6.isUserInteractionEnabled = true
-        btn7.isUserInteractionEnabled = true
-        btn8.isUserInteractionEnabled = true
-        btn9.isUserInteractionEnabled = true
-        btn10.isUserInteractionEnabled = true
-        btn11.isUserInteractionEnabled = true
-        btn12.isUserInteractionEnabled = true
-        btn13.isUserInteractionEnabled = true
-        btn14.isUserInteractionEnabled = true
+    
+    @IBAction func btn_start(_ sender: Any) {
+        btnNull.isUserInteractionEnabled = true
         btn15.isUserInteractionEnabled = true
+        btn12.isUserInteractionEnabled = true
+    }
+    
+    
+    @IBAction func btn_1(_ sender: Any) {
+        btnLocked()
+        btn5.isUserInteractionEnabled = true
+        btn2.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_2(_ sender: Any) {
+        btnLocked()
+        btn1.isUserInteractionEnabled = true
+        btn3.isUserInteractionEnabled = true
+        btn6.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_3(_ sender: Any) {
+        btnLocked()
+        btn2.isUserInteractionEnabled = true
+        btn4.isUserInteractionEnabled = true
+        btn7.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_4(_ sender: Any) {
+        btnLocked()
+        btn3.isUserInteractionEnabled = true
+        btn8.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_5(_ sender: Any) {
+        btnLocked()
+        btn1.isUserInteractionEnabled = true
+        btn6.isUserInteractionEnabled = true
+        btn9.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_6(_ sender: Any) {
+        btnLocked()
+        btn2.isUserInteractionEnabled = true
+        btn5.isUserInteractionEnabled = true
+        btn7.isUserInteractionEnabled = true
+        btn10.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_7(_ sender: Any) {
+        btnLocked()
+        btn3.isUserInteractionEnabled = true
+        btn6.isUserInteractionEnabled = true
+        btn8.isUserInteractionEnabled = true
+        btn11.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_8(_ sender: Any) {
+        btnLocked()
+        btn4.isUserInteractionEnabled = true
+        btn7.isUserInteractionEnabled = true
+        btn12.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_9(_ sender: Any) {
+        btnLocked()
+        btn5.isUserInteractionEnabled = true
+        btn10.isUserInteractionEnabled = true
+        btn13.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_10(_ sender: Any) {
+        btnLocked()
+        btn6.isUserInteractionEnabled = true
+        btn9.isUserInteractionEnabled = true
+        btn11.isUserInteractionEnabled = true
+        btn14.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_11(_ sender: Any) {
+        btnLocked()
+        btn7.isUserInteractionEnabled = true
+        btn10.isUserInteractionEnabled = true
+        btn12.isUserInteractionEnabled = true
+        btn15.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_12(_ sender: Any) {
+        btnLocked()
+        btn8.isUserInteractionEnabled = true
+        btn11.isUserInteractionEnabled = true
         btnNull.isUserInteractionEnabled = true
     }
     
-    @IBAction func btn_start(_ sender: Any) {
-        btnUnlocked()
-        
+    @IBAction func btn_13(_ sender: Any) {
+        btnLocked()
+        btn9.isUserInteractionEnabled = true
+        btn14.isUserInteractionEnabled = true
     }
     
-
+    @IBAction func btn_14(_ sender: Any) {
+        btnLocked()
+        btn10.isUserInteractionEnabled = true
+        btn13.isUserInteractionEnabled = true
+        btn15.isUserInteractionEnabled = true    }
+    
+    @IBAction func btn_15(_ sender: Any) {
+        btnLocked()
+        btn11.isUserInteractionEnabled = true
+        btn14.isUserInteractionEnabled = true
+        btnNull.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func btn_null(_ sender: Any) {
+        btnLocked()
+        btn12.isUserInteractionEnabled = true
+        btn15.isUserInteractionEnabled = true
+    }
+    
+    func sposta() {
+        
+    }
 }
 
