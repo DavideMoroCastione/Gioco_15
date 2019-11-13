@@ -10,35 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var lblTime: UILabel!
+    
     @IBOutlet weak var lblMoves: UILabel!
     @IBOutlet weak var lblResult: UILabel!
     @IBOutlet weak var btnStart: UIButton!
-    @IBOutlet weak var btn1: UIButton!
-    @IBOutlet weak var btn2: UIButton!
-    @IBOutlet weak var btn3: UIButton!
-    @IBOutlet weak var btn4: UIButton!
-    @IBOutlet weak var btn5: UIButton!
-    @IBOutlet weak var btn6: UIButton!
-    @IBOutlet weak var btn7: UIButton!
-    @IBOutlet weak var btn8: UIButton!
-    @IBOutlet weak var btn9: UIButton!
-    @IBOutlet weak var btn10: UIButton!
-    @IBOutlet weak var btn11: UIButton!
-    @IBOutlet weak var btn12: UIButton!
-    @IBOutlet weak var btn13: UIButton!
-    @IBOutlet weak var btn14: UIButton!
-    @IBOutlet weak var btn15: UIButton!
-    @IBOutlet weak var btnNull: UIButton!
     
     var mosse = 0
-    var tempo = 0
+    var numero = 0
+    var a = 0
+    var x = 3
+    var y = 3
+    var mat: [[Int]] = [[1, 2, 3, 4],
+                        [5, 6, 7, 8],
+                        [9, 10, 11, 12],
+                        [13, 14, 15, 16]]
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        btnLocked()
+        print(mat[1][1])
     }
     
     func contaMosse() {
@@ -46,30 +39,27 @@ class ViewController: UIViewController {
         lblMoves.text = String(mosse)
     }
     
-    func  btnLocked() {
-        btn1.isUserInteractionEnabled = false
-        btn2.isUserInteractionEnabled = false
-        btn3.isUserInteractionEnabled = false
-        btn4.isUserInteractionEnabled = false
-        btn5.isUserInteractionEnabled = false
-        btn6.isUserInteractionEnabled = false
-        btn7.isUserInteractionEnabled = false
-        btn8.isUserInteractionEnabled = false
-        btn9.isUserInteractionEnabled = false
-        btn10.isUserInteractionEnabled = false
-        btn11.isUserInteractionEnabled = false
-        btn12.isUserInteractionEnabled = false
-        btn13.isUserInteractionEnabled = false
-        btn14.isUserInteractionEnabled = false
-        btn15.isUserInteractionEnabled = false
-        btnNull.isUserInteractionEnabled = false
+    func mischia() {
+        
+        for _ in 0 ... 5 {
+            numero = Int(arc4random() % 2 + 1)
+            if(numero == 1) {
+                x = 2
+                a = mat[x][y]
+                mat[x][y] = mat[x+1][y]
+                mat[x+1][y] = a            }
+            else {
+                y = 2
+                a = mat[x][y]
+                mat[x][y] = mat[x][y+1]
+                mat[x][y+1] = a            }
+        }
+        
     }
     
     
     @IBAction func btn_start(_ sender: Any) {
-        btnNull.isUserInteractionEnabled = true
-        btn15.isUserInteractionEnabled = true
-        btn12.isUserInteractionEnabled = true
+        
     }
 
 }
