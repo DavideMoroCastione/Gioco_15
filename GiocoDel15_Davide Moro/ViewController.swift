@@ -26,12 +26,9 @@ class ViewController: UIViewController {
                         [13, 14, 15, 16]]
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(mat[1][1])
     }
     
     func contaMosse() {
@@ -43,18 +40,21 @@ class ViewController: UIViewController {
         
         for _ in 0 ... 5 {
             numero = Int(arc4random() % 2 + 1)
-            if(numero == 1) {
-                x = 2
+            
+            if(numero == 1 && x >= 0) {
+                x = x - 1
                 a = mat[x][y]
                 mat[x][y] = mat[x+1][y]
-                mat[x+1][y] = a            }
-            else {
-                y = 2
+                mat[x+1][y] = a
+            }
+            else if(numero == 2 && y >= 0 ){
+                y = y - 1
                 a = mat[x][y]
                 mat[x][y] = mat[x][y+1]
-                mat[x][y+1] = a            }
+                mat[x][y+1] = a
+            }
+            else {}
         }
-        
     }
     
     
