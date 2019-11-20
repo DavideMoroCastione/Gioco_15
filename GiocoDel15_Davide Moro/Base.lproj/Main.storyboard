@@ -137,6 +137,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Btn1" destination="aFe-VR-Gtf" id="7fQ-pS-3Gt"/>
+                        <outlet property="Btn10" destination="cYO-Zv-w58" id="FML-wG-h1F"/>
+                        <outlet property="Btn11" destination="Jpe-0e-L4S" id="ZVh-Cx-TLt"/>
+                        <outlet property="Btn12" destination="08J-ei-3wd" id="lOM-yO-Q1A"/>
+                        <outlet property="Btn13" destination="2Bk-jb-Csf" id="gVe-LN-t1T"/>
+                        <outlet property="Btn14" destination="s9u-cg-Hpk" id="c5s-DF-rVN"/>
+                        <outlet property="Btn15" destination="mZS-Dd-t5N" id="zuO-CG-hII"/>
+                        <outlet property="Btn2" destination="cq8-eO-Ykn" id="Myz-ns-oOl"/>
+                        <outlet property="Btn3" destination="GZR-gD-5io" id="fYB-nj-AhS"/>
+                        <outlet property="Btn4" destination="TVa-KH-9sV" id="kSj-ZR-PBC"/>
+                        <outlet property="Btn5" destination="YlY-wB-bcW" id="0wd-1B-az6"/>
+                        <outlet property="Btn6" destination="7V3-fU-orI" id="nBe-ma-ps9"/>
+                        <outlet property="Btn7" destination="gYV-hW-ihk" id="fDd-Su-IRC"/>
+                        <outlet property="Btn8" destination="rkR-Xf-SqX" id="hl6-rJ-SUE"/>
+                        <outlet property="Btn9" destination="Ai3-4A-ycr" id="Dep-iR-jUP"/>
+                        <outlet property="BtnNull" destination="YHV-v1-U3E" id="pEi-ua-w47"/>
                         <outlet property="btnStart" destination="Y7w-Tn-DQe" id="vEI-qy-zSo"/>
                         <outlet property="lblMoves" destination="bKZ-tP-6rJ" id="hbm-PG-pI1"/>
                         <outlet property="lblResult" destination="kYg-e1-gDp" id="tDk-AP-Nbn"/>
