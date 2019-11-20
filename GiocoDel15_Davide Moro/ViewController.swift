@@ -50,9 +50,16 @@ class ViewController: UIViewController {
                    [Btn5, Btn6, Btn7, Btn8],
                    [Btn9, Btn10, Btn11, Btn12],
                    [Btn13, Btn14, Btn15, BtnNull]]
+        BtnLocked()
         
     }
     
+    
+    
+    
+    @IBAction func btn_start(_ sender: Any) {
+        
+    }
     func contaMosse() {
         mosse = mosse + 1
         lblMoves.text = String(mosse)
@@ -79,10 +86,24 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func btn_start(_ sender: Any) {
-        
+    func BtnLocked() {
+        Btn1.isUserInteractionEnabled = false;
+        Btn2.isUserInteractionEnabled = false;
+        Btn3.isUserInteractionEnabled = false;
+        Btn4.isUserInteractionEnabled = false;
+        Btn5.isUserInteractionEnabled = false;
+        Btn6.isUserInteractionEnabled = false;
+        Btn7.isUserInteractionEnabled = false;
+        Btn8.isUserInteractionEnabled = false;
+        Btn9.isUserInteractionEnabled = false;
+        Btn10.isUserInteractionEnabled = false;
+        Btn11.isUserInteractionEnabled = false;
+        Btn12.isUserInteractionEnabled = false;
+        Btn13.isUserInteractionEnabled = false;
+        Btn14.isUserInteractionEnabled = false;
+        Btn15.isUserInteractionEnabled = false;
+        BtnNull.isUserInteractionEnabled = false;
     }
-
+    
 }
 
