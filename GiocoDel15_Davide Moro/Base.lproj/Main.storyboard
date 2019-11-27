@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -132,6 +132,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="8"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izh-sK-GFI">
+                                <rect key="frame" x="52" y="706" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Resetta"/>
+                                <connections>
+                                    <action selector="btn_reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UnD-ns-8dJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -153,6 +161,7 @@
                         <outlet property="Btn8" destination="rkR-Xf-SqX" id="hl6-rJ-SUE"/>
                         <outlet property="Btn9" destination="Ai3-4A-ycr" id="Dep-iR-jUP"/>
                         <outlet property="BtnNull" destination="YHV-v1-U3E" id="pEi-ua-w47"/>
+                        <outlet property="BtnReset" destination="Izh-sK-GFI" id="reg-ei-Kzf"/>
                         <outlet property="btnStart" destination="Y7w-Tn-DQe" id="vEI-qy-zSo"/>
                         <outlet property="lblMoves" destination="bKZ-tP-6rJ" id="hbm-PG-pI1"/>
                         <outlet property="lblResult" destination="kYg-e1-gDp" id="tDk-AP-Nbn"/>
