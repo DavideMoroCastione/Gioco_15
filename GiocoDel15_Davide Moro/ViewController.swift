@@ -62,11 +62,108 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func btn_1(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_2(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_3(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_4(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_5(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_6(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_7(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_8(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_9(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_10(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_11(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_12(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_13(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_14(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_15(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
+    @IBAction func btn_null(_ sender: Any) {
+        contaMosse()
+        
+    }
+    
+    
     
     func contaMosse() {
         mosse = mosse + 1
         lblMoves.text = String(mosse)
     }
+    
     
     func mischia() {
         //matrice con bottoni
@@ -133,6 +230,12 @@ class ViewController: UIViewController {
         Btn14.setTitle(String(14), for: .normal)
         Btn15.setTitle(String(15), for: .normal)
         BtnNull.setTitle(String("--"), for: .normal)
+        y = 3
+        x = 3
+    }
+    
+    func sposta() {
+        
     }
 }
 
