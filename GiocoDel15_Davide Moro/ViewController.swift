@@ -35,8 +35,8 @@ class ViewController: UIViewController {
     var mosse = 0
     var numero = 0
     var a = ""
-    var x = 3
-    var y = 3
+    var x = 3 //variabile per le righe della matrice
+    var y = 3 //variabile per le colonne della matrice
     var matrice: [[UIButton]] = [[]]
     
     override func viewDidLoad() {
@@ -52,125 +52,36 @@ class ViewController: UIViewController {
     }
     @IBAction func btn_reset(_ sender: Any) {
         resetta()
-        btnStart.isUserInteractionEnabled = true
+        
     }
     
     
     @IBAction func btn_start(_ sender: Any) {
         mischia()
-        btnStart.isUserInteractionEnabled = false
-    }
-    
-    
-    @IBAction func btn_1(_ sender: Any) {
-        contaMosse()
         
     }
     
     
-    @IBAction func btn_2(_ sender: Any) {
+    @IBAction func Sposta(_ sender: UIButton) {
         contaMosse()
+        vinto()
         
     }
     
-    
-    @IBAction func btn_3(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_4(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_5(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_6(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_7(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_8(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_9(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_10(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_11(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_12(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_13(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_14(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_15(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    @IBAction func btn_null(_ sender: Any) {
-        contaMosse()
-        
-    }
-    
-    
-    
+    // conta le mosse fatte per vincere
     func contaMosse() {
         mosse = mosse + 1
         lblMoves.text = String(mosse)
     }
     
-    
+    // mischia le caselle all'inizio del gioco
     func mischia() {
         //matrice con bottoni
-        for _ in 0 ... 10 {
+        for _ in 0 ... 50 {
             
-            numero = Int(arc4random() % 2 + 1)
+            numero = Int(arc4random() % 4 + 1)
             
+            // muove a sinistra
             if(numero == 1 && x >= 1) {
                 
                 a = matrice[x][y].currentTitle!
@@ -178,17 +89,29 @@ class ViewController: UIViewController {
                 matrice[x - 1][y].setTitle(String(a), for: .normal)
                 x = x - 1
             }
-            else if(numero == 2 && y >= 1 ){
+            // muove in alto
+            else if(numero == 2 && y >= 1) {
                 
                 a = matrice[x][y].currentTitle!
                 matrice[x][y].setTitle(String(matrice[x][y - 1].currentTitle!), for: .normal)
                 matrice[x][y - 1].setTitle(String(a), for: .normal)
                 y = y - 1
             }
-            else {
+            // muove a destra
+            else if(numero == 3 && x <= 2) {
                 
-                if(x == 1){ x = x + 1 }
-                else if(y == 1){ y = y + 1 }
+                a = matrice[x][y].currentTitle!
+                matrice[x][y].setTitle(String(matrice[x + 1][y].currentTitle!), for: .normal)
+                matrice[x + 1][y].setTitle(String(a), for: .normal)
+                x = x + 1
+            }
+            // muove in basso
+            else if(numero == 4 && y <= 2) {
+                
+                a = matrice[x][y].currentTitle!
+                matrice[x][y].setTitle(String(matrice[x][y + 1].currentTitle!), for: .normal)
+                matrice[x][y + 1].setTitle(String(a), for: .normal)
+                y = y + 1
             }
         }
     }
@@ -234,8 +157,18 @@ class ViewController: UIViewController {
         x = 3
     }
     
-    func sposta() {
-        
+    func vinto () {
+        if(Btn1.currentTitle! == "1" && Btn2.currentTitle! == "2" &&
+            Btn3.currentTitle! == "3" && Btn4.currentTitle! == "4" &&
+            Btn5.currentTitle! == "5" && Btn6.currentTitle! == "6" &&
+            Btn7.currentTitle! == "7" && Btn8.currentTitle! == "8" &&
+            Btn9.currentTitle! == "9" && Btn10.currentTitle! == "10" &&
+            Btn11.currentTitle! == "11" && Btn12.currentTitle! == "12" &&
+            Btn13.currentTitle! == "13" && Btn14.currentTitle! == "14" &&
+            Btn15.currentTitle! == "15" && BtnNull.currentTitle! == "--") {
+            
+            lblResult.text = "Hai vinto"
+        }
     }
 }
 
