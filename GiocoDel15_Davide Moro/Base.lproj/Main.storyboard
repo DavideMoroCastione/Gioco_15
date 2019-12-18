@@ -166,7 +166,7 @@
                                 <rect key="frame" x="257" y="481" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="--"/>
+                                <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="Sposta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGO-gl-No6"/>
                                 </connections>
@@ -229,6 +229,22 @@
                         <outlet property="btnStart" destination="Y7w-Tn-DQe" id="vEI-qy-zSo"/>
                         <outlet property="lblMoves" destination="bKZ-tP-6rJ" id="hbm-PG-pI1"/>
                         <outlet property="lblResult" destination="kYg-e1-gDp" id="tDk-AP-Nbn"/>
+                        <outletCollection property="arr" destination="aFe-VR-Gtf" collectionClass="NSMutableArray" id="bFl-Vz-lQf"/>
+                        <outletCollection property="arr" destination="cq8-eO-Ykn" collectionClass="NSMutableArray" id="uRd-3G-6em"/>
+                        <outletCollection property="arr" destination="GZR-gD-5io" collectionClass="NSMutableArray" id="DbN-cp-79Z"/>
+                        <outletCollection property="arr" destination="TVa-KH-9sV" collectionClass="NSMutableArray" id="Stj-qK-nu5"/>
+                        <outletCollection property="arr" destination="YlY-wB-bcW" collectionClass="NSMutableArray" id="NbA-Kr-ADn"/>
+                        <outletCollection property="arr" destination="7V3-fU-orI" collectionClass="NSMutableArray" id="MhD-Ms-RYY"/>
+                        <outletCollection property="arr" destination="gYV-hW-ihk" collectionClass="NSMutableArray" id="6jP-fB-5a4"/>
+                        <outletCollection property="arr" destination="rkR-Xf-SqX" collectionClass="NSMutableArray" id="IUQ-YV-JIE"/>
+                        <outletCollection property="arr" destination="Ai3-4A-ycr" collectionClass="NSMutableArray" id="lA0-w3-dUk"/>
+                        <outletCollection property="arr" destination="cYO-Zv-w58" collectionClass="NSMutableArray" id="44X-ZD-voc"/>
+                        <outletCollection property="arr" destination="Jpe-0e-L4S" collectionClass="NSMutableArray" id="u9d-sF-vCN"/>
+                        <outletCollection property="arr" destination="08J-ei-3wd" collectionClass="NSMutableArray" id="B8p-0f-BD7"/>
+                        <outletCollection property="arr" destination="2Bk-jb-Csf" collectionClass="NSMutableArray" id="3a1-Xz-870"/>
+                        <outletCollection property="arr" destination="s9u-cg-Hpk" collectionClass="NSMutableArray" id="tSe-tU-PoD"/>
+                        <outletCollection property="arr" destination="mZS-Dd-t5N" collectionClass="NSMutableArray" id="S3A-J6-nXx"/>
+                        <outletCollection property="arr" destination="YHV-v1-U3E" collectionClass="NSMutableArray" id="yJP-lF-Dha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -35,9 +35,11 @@ class ViewController: UIViewController {
     var mosse = 0
     var numero = 0
     var a = ""
+    var b = ""
     var x = 3 //variabile per le righe della matrice
     var y = 3 //variabile per le colonne della matrice
     var matrice: [[UIButton]] = [[]]
+    @IBOutlet var arr: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,7 @@ class ViewController: UIViewController {
                    [Btn5, Btn6, Btn7, Btn8],
                    [Btn9, Btn10, Btn11, Btn12],
                    [Btn13, Btn14, Btn15, BtnNull]]
-        BtnLocked()
+        
         
     }
     @IBAction func btn_reset(_ sender: Any) {
@@ -65,6 +67,41 @@ class ViewController: UIViewController {
     @IBAction func Sposta(_ sender: UIButton) {
         contaMosse()
         vinto()
+        var ciao :Int!
+        ciao = arr.firstIndex(of: sender)
+        var r = ciao%4
+        var c = ciao/4
+        if(c<3) {
+            
+            if(matrice[r][c+1].currentTitle! == "0") {
+                b = matrice[r][c].currentTitle!
+                matrice[r][c+1].setTitle(String(b), for: .normal)
+                matrice[r][c].setTitle(String("0"), for: .normal)
+            }
+        }
+        if(c>0) {
+            
+            if(matrice[r][c-1].currentTitle! == "0") {
+                b = matrice[r][c].currentTitle!
+                matrice[r][c-1].setTitle(String(b), for: .normal)
+                matrice[r][c].setTitle(String("0"), for: .normal)
+            }
+        }
+        if( r < 3) {
+            
+            if(matrice[r+1][c].currentTitle! == "0") {
+                b = matrice[r][c].currentTitle!
+                matrice[r+1][c].setTitle(String(b), for: .normal)
+                matrice[r][c].setTitle(String("0"), for: .normal)
+            }
+        }
+        if(r < 0) {
+            if(matrice[r-1][c].currentTitle! == "0") {
+                b = matrice[r][c].currentTitle!
+                matrice[r-1][c].setTitle(String(b), for: .normal)
+                matrice[r][c].setTitle(String("0"), for: .normal)
+            }
+        }
         
     }
     
@@ -85,56 +122,41 @@ class ViewController: UIViewController {
             if(numero == 1 && x >= 1) {
                 
                 a = matrice[x][y].currentTitle!
-                matrice[x][y].setTitle(String(matrice[x - 1][y].currentTitle!), for: .normal)
-                matrice[x - 1][y].setTitle(String(a), for: .normal)
+                matrice[x][y].setTitle(String(matrice[x-1][y].currentTitle!), for: .normal)
+                matrice[x-1][y].setTitle(String(a), for: .normal)
                 x = x - 1
             }
             // muove in alto
             else if(numero == 2 && y >= 1) {
                 
                 a = matrice[x][y].currentTitle!
-                matrice[x][y].setTitle(String(matrice[x][y - 1].currentTitle!), for: .normal)
-                matrice[x][y - 1].setTitle(String(a), for: .normal)
+                matrice[x][y].setTitle(String(matrice[x][y-1].currentTitle!), for: .normal)
+                matrice[x][y-1].setTitle(String(a), for: .normal)
                 y = y - 1
             }
             // muove a destra
             else if(numero == 3 && x <= 2) {
                 
                 a = matrice[x][y].currentTitle!
-                matrice[x][y].setTitle(String(matrice[x + 1][y].currentTitle!), for: .normal)
-                matrice[x + 1][y].setTitle(String(a), for: .normal)
+                matrice[x][y].setTitle(String(matrice[x+1][y].currentTitle!), for: .normal)
+                matrice[x+1][y].setTitle(String(a), for: .normal)
                 x = x + 1
             }
             // muove in basso
             else if(numero == 4 && y <= 2) {
                 
                 a = matrice[x][y].currentTitle!
-                matrice[x][y].setTitle(String(matrice[x][y + 1].currentTitle!), for: .normal)
-                matrice[x][y + 1].setTitle(String(a), for: .normal)
+                matrice[x][y].setTitle(String(matrice[x][y+1].currentTitle!), for: .normal)
+                matrice[x][y+1].setTitle(String(a), for: .normal)
                 y = y + 1
             }
         }
     }
     
     
-    func BtnLocked() {
-        Btn1.isUserInteractionEnabled = false;
-        Btn2.isUserInteractionEnabled = false;
-        Btn3.isUserInteractionEnabled = false;
-        Btn4.isUserInteractionEnabled = false;
-        Btn5.isUserInteractionEnabled = false;
-        Btn6.isUserInteractionEnabled = false;
-        Btn7.isUserInteractionEnabled = false;
-        Btn8.isUserInteractionEnabled = false;
-        Btn9.isUserInteractionEnabled = false;
-        Btn10.isUserInteractionEnabled = false;
-        Btn11.isUserInteractionEnabled = false;
-        Btn12.isUserInteractionEnabled = false;
-        Btn13.isUserInteractionEnabled = false;
-        Btn14.isUserInteractionEnabled = false;
-        Btn15.isUserInteractionEnabled = false;
-        BtnNull.isUserInteractionEnabled = false;
-    }
+    
+    
+    
     
     func resetta() {
         Btn1.setTitle(String(1), for: .normal)
@@ -152,7 +174,7 @@ class ViewController: UIViewController {
         Btn13.setTitle(String(13), for: .normal)
         Btn14.setTitle(String(14), for: .normal)
         Btn15.setTitle(String(15), for: .normal)
-        BtnNull.setTitle(String("--"), for: .normal)
+        BtnNull.setTitle(String(0), for: .normal)
         y = 3
         x = 3
     }
@@ -165,10 +187,12 @@ class ViewController: UIViewController {
             Btn9.currentTitle! == "9" && Btn10.currentTitle! == "10" &&
             Btn11.currentTitle! == "11" && Btn12.currentTitle! == "12" &&
             Btn13.currentTitle! == "13" && Btn14.currentTitle! == "14" &&
-            Btn15.currentTitle! == "15" && BtnNull.currentTitle! == "--") {
+            Btn15.currentTitle! == "15" && BtnNull.currentTitle! == "0") {
             
             lblResult.text = "Hai vinto"
         }
     }
+    
+
 }
 
