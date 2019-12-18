@@ -66,12 +66,13 @@ class ViewController: UIViewController {
     
     @IBAction func Sposta(_ sender: UIButton) {
         contaMosse()
-        vinto()
+        
         var ciao :Int!
         ciao = arr.firstIndex(of: sender)
-        var r = ciao%4
-        var c = ciao/4
-        if(c<3) {
+        var c = ciao%4
+        var r = ciao/4
+        
+        if(c < 3) {
             
             if(matrice[r][c+1].currentTitle! == "0") {
                 b = matrice[r][c].currentTitle!
@@ -79,7 +80,7 @@ class ViewController: UIViewController {
                 matrice[r][c].setTitle(String("0"), for: .normal)
             }
         }
-        if(c>0) {
+        if(c > 0) {
             
             if(matrice[r][c-1].currentTitle! == "0") {
                 b = matrice[r][c].currentTitle!
@@ -87,7 +88,7 @@ class ViewController: UIViewController {
                 matrice[r][c].setTitle(String("0"), for: .normal)
             }
         }
-        if( r < 3) {
+        if(r < 3) {
             
             if(matrice[r+1][c].currentTitle! == "0") {
                 b = matrice[r][c].currentTitle!
@@ -95,14 +96,14 @@ class ViewController: UIViewController {
                 matrice[r][c].setTitle(String("0"), for: .normal)
             }
         }
-        if(r < 0) {
+        if(r > 0) {
             if(matrice[r-1][c].currentTitle! == "0") {
                 b = matrice[r][c].currentTitle!
                 matrice[r-1][c].setTitle(String(b), for: .normal)
                 matrice[r][c].setTitle(String("0"), for: .normal)
             }
         }
-        
+        vinto()
     }
     
     // conta le mosse fatte per vincere
@@ -177,6 +178,7 @@ class ViewController: UIViewController {
         BtnNull.setTitle(String(0), for: .normal)
         y = 3
         x = 3
+        mosse = 0
     }
     
     func vinto () {
